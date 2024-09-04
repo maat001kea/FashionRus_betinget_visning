@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", hentData);
 
-const url = `https://kea-alt-del.dk/t7/api/products?limit=16`;
+const url = `https://kea-alt-del.dk/t7/api/products?limit=15`;
 const skabelon = document.querySelector("template").content;
 const container = document.querySelector("main");
 
