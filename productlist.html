@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products By Category</title>
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products By Category</title>
-  <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/style.css" />
-</head>
+  <body class="productlist">
+    <!-- Header with navigation links -->
+    <header class="mainNav">
+      <a href="index.html">
+        <h1>Design<span>4</span>You</h1>
+      </a>
+      <nav>
+        <a href="category.html">Categories</a>
+        <a href="#">Brands</a>
+        <a href="#">Seasons</a>
+      </nav>
+    </header>
 
-<body class="productlist">
-  <header class="mainNav">
-    <a href="index.html">
-      <h1>Fashion<span>R</span>Us</h1>
-    </a>
-    <nav>
-      <a href="category.html">Categories</a>
-      <a href="#">Brands</a>
-      <a href="#">Seasons</a>
-    </nav>
-  </header>
-  <main>
-    <h2>Nike</h2>
-    <template>
-      <article class="smallProduct">
-        <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
-          alt="Sahara Team India Fanwear Round Neck Jersey" />
-        <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-        <p class="subtle">Tshirts | Nike</p>
-        <p class="price">DKK <span>1595</span>,-</p>
-        <div class="discounted">
-          <p>Now DKK <span></span>,-</p>
-          <p><span></span>%</p>
-        </div>
-        <a href="product.html">Read More</a>
-      </article>
-    </template>
-  </main>
-  <script src="js/produktliste.js"></script>
-</body>
+    <!-- Main content area for the product list -->
+    <main>
+      <h2>Nike</h2>
 
+      <!-- Grid container for dynamically added products -->
+      <div class="grid"></div>
+
+      <!-- Template for a single product card -->
+      <template id="smallProductTemplate">
+        <article class="smallProduct">
+          <img src="" alt="" />
+          <h3>Product Name</h3>
+          <p class="subtle">Product Category | Brand</p>
+          <p class="price">DKK <span></span>,-</p>
+          <div class="discounted">
+            <p class="p1">Now DKK <span></span>,-</p>
+            <p class="p2"><span></span></p>
+          </div>
+          <a class="d1" href="#">Read More</a>
+        </article>
+      </template>
+    </main>
+    <footer>Lavet af Mahmoud Atie @2024</footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="js/produktliste.js"></script>
+  </body>
 </html>
