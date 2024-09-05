@@ -203,166 +203,176 @@ main h2 {
   align-items: start; /* Align items at the top */
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1924px) {
   .grid {
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     gap: 2rem; /* Space between items */
   }
-}
 
-/*ProductList*/
-.productlist main {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
-  gap: 2rem;
-}
-.productlist main h2 {
-  grid-column: 1 / span 3;
-}
+  /*ProductList*/
+  .productlist main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    gap: 2rem;
+  }
+  .productlist main h2 {
+    grid-column: 1 / span 3;
+  }
 
-h2 {
-  display: flex;
-  margin: auto;
-  margin-right: 21%;
-}
+  h2 {
+    display: flex;
+    margin: auto;
+    margin-right: 21%;
+  }
 
-.cath2 {
-  display: grid;
-  margin: auto;
-}
+  .cath2 {
+    display: grid;
+    margin: auto;
+  }
 
-.productlist article h3 {
-  font-size: 1rem;
-  flex-grow: 3;
-}
-.productlist article > * {
-  margin: 0;
-  font-size: 0.9rem;
-}
-.subtle {
-  color: var(--text-decoration-color);
-}
-.productlist article {
-  display: flex;
-  flex-direction: column;
-}
+  .productlist article h3 {
+    font-size: 1rem;
+    flex-grow: 3;
+  }
+  .productlist article > * {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  .subtle {
+    color: var(--text-decoration-color);
+  }
+  .productlist article {
+    display: flex;
+    flex-direction: column;
+  }
 
-.productlist article.soldOut img {
-  opacity: 0.5;
-}
-.productlist article.soldOut::before {
-  content: "Sold Out";
-  position: absolute;
-  padding: 1rem;
-  background-color: #d32f2f;
-  color: #d8d8d8;
-  border-radius: 5%;
-}
-.productlist article .discounted {
-  display: none;
-}
-.productlist article.onSale .discounted {
-  display: flex;
-  justify-content: space-between;
-}
-.discounted > p {
-  margin-bottom: 0;
-}
-.productlist article.onSale .price span {
-  /* display: initial; */
-  text-decoration: line-through;
-  color: var(--off-color);
-}
-.productlist article button {
-  margin-top: auto;
-}
-.productlist article {
-  margin-bottom: 1rem;
-}
-.discounted p:last-child {
-  background: var(--off-color);
-  padding: 0.2rem;
-}
+  .productlist article.soldOut img {
+    opacity: 0.5;
+  }
+  .productlist article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    padding: 1rem;
+    background-color: #d32f2f;
+    color: #d8d8d8;
+    border-radius: 5%;
+  }
+  .productlist article .discounted {
+    display: none;
+  }
+  .productlist article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+  }
+  .discounted > p {
+    margin-bottom: 0;
+  }
+  .productlist article.onSale .price span {
+    /* display: initial; */
+    text-decoration: line-through;
+    color: var(--off-color);
+  }
+  .productlist article button {
+    margin-top: auto;
+  }
+  .productlist article {
+    margin-bottom: 1rem;
+  }
+  .discounted p:last-child {
+    background: var(--off-color);
+    padding: 0.2rem;
+  }
 
-/*Product*/
-.breadcrumbs {
-  display: none;
-}
+  /*Product*/
+  .breadcrumbs {
+    display: none;
+  }
 
-.purchaseBox {
-  background: #d8d8d8;
-  color: var(--background-color);
-  padding: 1rem;
-}
-.info {
-  padding: 1rem;
-}
-.product select {
-  min-width: 100px;
-}
-.product main {
-  display: grid;
-}
-.product main .breadcrumbs,
-.product main img {
-  grid-column: 1/-1;
-}
-.purchaseBox form label {
-  gap: 1rem;
-}
-.purchaseBox button {
-  display: block;
-  margin-top: 1rem;
-  width: 100%;
-}
-dt {
-  font-weight: 700;
-}
-/* Footer styling */
-footer {
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  text-align: center; /* Center the text */
-  padding: 2rem;
-  margin-top: 10rem;
-  font-size: 1rem;
-}
-
-footer p {
-  margin: 0;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 900px) {
-  .product main {
-    grid-template-columns: 1fr 310px;
+  .purchaseBox {
+    background: #d8d8d8;
+    color: var(--background-color);
+    padding: 1rem;
   }
   .info {
-    order: 0;
+    padding: 1rem;
   }
-  .purchaseBox {
-    order: 2;
-    transform: translate(-50px, -100px);
+  .product select {
+    min-width: 100px;
+  }
+  .product main {
+    display: grid;
+  }
+  .product main .breadcrumbs,
+  .product main img {
+    grid-column: 1/-1;
+  }
+  .purchaseBox form label {
+    gap: 1rem;
+  }
+  .purchaseBox button {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+  }
+  dt {
+    font-weight: 700;
+  }
+  /* Footer styling */
+  footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center the text */
+    padding: 2rem;
+    margin-top: 10rem;
+    font-size: 1rem;
   }
 
-  .breadcrumbs {
-    display: flex;
-    font-size: 0.8rem;
-    list-style-type: none;
+  footer p {
+    margin: 0;
+    font-weight: bold;
   }
 
-  .breadcrumbs li::after {
-    content: " > ";
-    font-size: 0.6rem;
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 10px;
-    transition: all 0.3s;
+  /* Default Styles */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 2rem; /* Space between items */
   }
 
-  .breadcrumbs li:last-child::after {
-    background: none;
-    content: "";
+  @media (max-width: 570px) {
+    .grid {
+      grid-template-columns: 1fr; /* Make it a single column on small screens */
+      gap: 1rem; /* Adjust the gap to fit mobile layout */
+      display: grid; /* Ensure the grid is displayed on small screens */
+    }
+
+    .info {
+      order: 0;
+    }
+
+    .purchaseBox {
+      order: 2;
+      transform: translate(-50px, -100px);
+    }
+
+    .breadcrumbs {
+      display: flex;
+      font-size: 0.8rem;
+      list-style-type: none;
+    }
+
+    .breadcrumbs li::after {
+      content: " > ";
+      font-size: 0.6rem;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 10px;
+      transition: all 0.3s;
+    }
+
+    .breadcrumbs li:last-child::after {
+      content: ""; /* Remove the arrow for the last item */
+    }
   }
 }
